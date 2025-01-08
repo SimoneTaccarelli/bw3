@@ -25,15 +25,40 @@ async function getPopularSongs(tracklistUrl){
         let data = await response.json();
         let popularSongs = data.data;
         popularSongs.sort((a, b) => b.rank - a.rank);
-        
+        let count = 1;
         let popularSongsContainer = document.getElementById("canzoni-popolari");
-        popularSongsContainer.innerHTML = "<table class='table table-striped'> <thead><tr><th>Titolo</th><th>Rank</th><th>Durata</th></tr></thead><tbody>";
+        popularSongsContainer.innerHTML = `
+            <table class='table table-striped '>
+                <thead>
+                    <tr>
+                        <th>Popolari</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tabella-popolari">
+        `;
+        let tabella = document.getElementById("tabella-popolari");
         popularSongs.forEach(song => {
-            if(song.rank <= 5){ 
-                popularSongsContainer.innerHTML += `<tr><td>${song.title}</td><td>${song.rank}</td><td>${song.duration}</td></tr>`;
+            if(count <= 5){
+                let minute = Math.floor(song.duration / 60);
+                let secondi = song.duration % 60;
+                tabella.innerHTML += `
+                    <tr>
+                        <td>${count}</td>
+                        <td><img src="${song.album.cover_small}" alt="${song.album.title}"></td>
+                        <td>${song.title}</td>
+                        <td>${song.rank}</td>
+                        <td>${minute}:${secondi}</td>
+                    </tr>`;
+                count++;  
             }
+            
         });
-        popularSongsContainer.innerHTML += "</tbody></table>";
+        
+            popularSongsContainer.innerHTML += "</tbody></table>";
+        
     }catch(error){
         console.log(error);
     }
@@ -41,7 +66,6 @@ async function getPopularSongs(tracklistUrl){
 
 document.addEventListener("DOMContentLoaded", function(){
     getArtistInfo();
-    getPopularSongs();
 });
 
 
