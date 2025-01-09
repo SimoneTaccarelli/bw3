@@ -1,6 +1,3 @@
-
-
-
 #bd-ab{
     background-color: rgb(94, 86, 86);
 }
@@ -69,3 +66,26 @@ margin-left: 30px;
 color: white;
 font-weight: bold;
 }
+
+/* tabella */
+.table tr th{
+    background-color: transparent;
+    color: white;
+    border: 0px;
+}
+
+#tabella-popolarix5 tr td{
+    background-color:transparent;
+    color: white;
+    border: 0px;
+}
+
+#tabella-popolarix10 tr td{
+    background-color: transparent;
+    color: white;
+    border: 0px;
+}   
+
+
+
+
