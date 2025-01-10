@@ -62,7 +62,7 @@ function mostraTop5(songs) {
                 <tr>
                     <td>${count}</td>
                     <td><img src="${song.album.cover_small}" alt="${song.album.title}"></td>
-                    <td>${song.title}</td>
+                    <td>${song.title.substring(0, 40)}...</td>
                     <td>${song.rank}</td>
                     <td>${minute}:${secondi}</td>
                 </tr>`;
@@ -70,7 +70,7 @@ function mostraTop5(songs) {
         }
     });
     popolarix5.innerHTML += "</tbody></table>";
-    popolarix5.innerHTML += "<button id='btn-visualizza-altri-ST'>Visualizza altri</button>";
+    popolarix5.innerHTML += "<button id='btn-visualizza-altri-ST'>Visualizza altro</button>";
     
     
     // Aggiungi gli event listener dopo aver creato i bottoni
@@ -119,7 +119,7 @@ function visualizzaAltri(songs) {
         }
     });
     popolarix10.innerHTML += "</tbody></table>";
-    popolarix10.innerHTML += "<button id='btn-visualizza-altri-ST' style='display: none;'>Visualizza altri</button>";
+    popolarix10.innerHTML += "<button id='btn-visualizza-altri-ST' style='display: none;'>Visualizza altro</button>";
     popolarix10.innerHTML += "<button id='riduci-ST'>Riduci</button>";
     
     // Aggiungi gli event listener dopo aver creato i bottoni

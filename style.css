@@ -1,5 +1,5 @@
 #bd-ab{
-    background-color: rgb(94, 86, 86);
+    background-image: linear-gradient(1deg, rgb(32, 32, 32) 40%, transparent);
 }
 
 
@@ -84,7 +84,101 @@ font-weight: bold;
     background-color: transparent;
     color: white;
     border: 0px;
-}   
+} 
+
+#tabella-popolarix5  tr td:nth-child(3){
+    /* background-color: red; */
+    padding-right: 100px;
+    align-content: center;
+    text-wrap: nowrap;
+}
+
+#tabella-popolarix5  tr td:nth-child(1){
+    /* background-color: red; */
+    align-content: center;
+    text-align: center;
+}
+
+#tabella-popolarix5  tr td:nth-child(4){
+    /* background-color: red; */
+    align-content: center;
+    padding-right: 100px;
+    text-align: center;
+}
+
+
+#tabella-popolarix5  tr td:nth-child(5){
+    /* background-color: red; */
+    align-content: center;
+    text-align: end;
+}
+
+
+/* da fare seconda tabella */
+#tabella-popolarix10  tr td:nth-child(3){
+    /* background-color: red; */
+    padding-right: 100px;
+    align-content: center;
+    text-wrap: nowrap;
+}
+
+#tabella-popolarix10  tr td:nth-child(1){
+    /* background-color: red; */
+    align-content: center;
+    text-align: center;
+}
+
+#tabella-popolarix10  tr td:nth-child(4){
+    /* background-color: red; */
+    align-content: center;
+    padding-right: 100px;
+    text-align: center;
+}
+
+
+#tabella-popolarix10  tr td:nth-child(5){
+    /* background-color: red; */
+    align-content: center;
+    text-align: end;
+}
+
+
+/* pulsanti vis e riduci */
+#btn-visualizza-altri-ST{
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    padding-left: 35px;
+    color: grey;
+    font-weight: bold;
+}
+
+#btn-visualizza-altri-ST:hover{
+    color: rgb(164, 155, 155);
+    cursor: pointer;
+}
+
+#riduci-ST{
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    padding-left: 35px;
+    color: grey;
+    font-weight: bold;
+}
+
+#riduci-ST:hover{
+    color: rgb(164, 155, 155);
+    cursor: pointer;
+}
+
+
+
+
 
 
 
