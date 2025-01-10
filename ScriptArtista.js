@@ -31,11 +31,13 @@ async function getPopularSongs(tracklistUrl){
         window.popularSongs = popularSongs;
         
         mostraTop5(popularSongs);
-        
+        ascoltatoriMensili(popularSongs);
     }catch(error){
         console.log(error);
     }
 }
+
+
 
 // Nuova funzione per mostrare le prime 5 canzoni
 function mostraTop5(songs) {
@@ -45,7 +47,7 @@ function mostraTop5(songs) {
         <table class='table'>
             <thead>
                 <tr>
-                    <th>Popolari</th>
+                    <th><h3>Popolari</h3></th>
                     <th></th>
                     <th></th>
                     <th></th>
@@ -58,12 +60,13 @@ function mostraTop5(songs) {
         if(count <= 5){
             let minute = Math.floor(song.duration / 60);
             let secondi = song.duration % 60;
+            let rank = (song.rank/1000).toLocaleString('en-US',{minimumFractionDigits: 3, maximumFractionDigits: 3});
             tabella.innerHTML += `
                 <tr>
                     <td>${count}</td>
                     <td><img src="${song.album.cover_small}" alt="${song.album.title}"></td>
                     <td>${song.title.substring(0, 40)}...</td>
-                    <td>${song.rank}</td>
+                    <td>${rank}</td>
                     <td>${minute}:${secondi}</td>
                 </tr>`;
             count++;  
@@ -107,6 +110,7 @@ function visualizzaAltri(songs) {
         if(count <= 10){
         let minute = Math.floor(song.duration / 60);
         let secondi = song.duration % 60;
+        let rank = (song.rank/1000).toLocaleString('en-US',{minimumFractionDigits: 3, maximumFractionDigits: 3});
         tabella.innerHTML += `
             <tr>
                 <td>${count}</td>

@@ -5,13 +5,24 @@
 
 #first-container-ab {
     background-color: blue;
-color: white;
-padding: 25px;
+    color: white;
+    padding: 25px;
+    padding: 1px;
+    position: relative;
 }
 
 #first-child-ab{
     margin-top: 80px;
-line-height: 0.6;
+    line-height: 0.6;
+    position: absolute;
+    top: 70px;
+    left: 4px;
+}
+
+#second-child-ab{
+    position: absolute;
+    top: 270px;
+    left: 10px;
 }
 
 #first-main-ab {
@@ -74,6 +85,8 @@ font-weight: bold;
     border: 0px;
 }
 
+
+
 #tabella-popolarix5 tr td{
     background-color:transparent;
     color: white;
@@ -97,13 +110,22 @@ font-weight: bold;
     /* background-color: red; */
     align-content: center;
     text-align: center;
+    color: grey;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
-
 #tabella-popolarix5  tr td:nth-child(4){
     /* background-color: red; */
     align-content: center;
     padding-right: 100px;
     text-align: center;
+    color: grey;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 
@@ -111,6 +133,11 @@ font-weight: bold;
     /* background-color: red; */
     align-content: center;
     text-align: end;
+    color: grey;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 
@@ -126,6 +153,11 @@ font-weight: bold;
     /* background-color: red; */
     align-content: center;
     text-align: center;
+    color: grey;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 #tabella-popolarix10  tr td:nth-child(4){
@@ -133,6 +165,11 @@ font-weight: bold;
     align-content: center;
     padding-right: 100px;
     text-align: center;
+    color: grey;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 
@@ -140,6 +177,11 @@ font-weight: bold;
     /* background-color: red; */
     align-content: center;
     text-align: end;
+    color: grey;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 
@@ -175,6 +217,64 @@ font-weight: bold;
     color: rgb(164, 155, 155);
     cursor: pointer;
 }
+
+/* player */
+
+.bg-container {
+    height: 5.5rem;
+    background-color: #282828;
+  }
+  
+  .playerControls .row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    gap: 0.5rem;
+  }
+  
+  .playerControls a {
+    padding: 0;
+    margin: 0;
+    width: auto;
+    flex-shrink: 0;
+  }
+  
+  .playerControls img {
+    width: 16px;
+    height: auto;
+    display: block;
+  }
+  
+  .playerControls {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .playerControls a img {
+    width: 14px;
+    margin-top: 1rem;
+    filter: brightness(60%);
+  }
+  
+  .playerControls a:hover {
+    filter: brightness(80%);
+    color: #282828 !important;
+  }
+  
+  .progress {
+    color: white;
+    background-color: #414141;
+    height: 3px;
+  }
+  
+  .playBar p {
+    margin-bottom: 20px;
+    color: white;
+  }
 
 
 
